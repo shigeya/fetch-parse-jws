@@ -16,6 +16,7 @@ if [ ! -e $FILE ]; then
 	mv t.html $FILE
 	touch fetch.log
 	echo `date`: $FILE >> fetch.log
+	ruby jws-gs2csv.rb $FILE
 else
 	echo $FILE already exists.
 fi
